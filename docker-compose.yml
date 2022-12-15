@@ -2,10 +2,6 @@ version: '3'
 
 services:
 
-  react:
-    image: containerregistrycezarmunteanu30242.azurecr.io/dsmunteanucezardsmunteanucezarassignmentfrontend
-    ports:
-      - "3000:3000"
 
   demo-db:
     image: containerregistrycezarmunteanu30242.azurecr.io/db
