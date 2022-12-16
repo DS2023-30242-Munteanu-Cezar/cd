@@ -3,7 +3,7 @@ version: '3'
 services:
 
   demo-db:
-    image: postgres
+    image: db
 
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root"]
@@ -21,7 +21,7 @@ services:
     container_name: demo-db
 
   demo-be:
-    image: be-img
+    image: dsmunteanucezardsmunteanucezarassignmentbackend
     restart: always
     ports:
       - "8080:8080"
