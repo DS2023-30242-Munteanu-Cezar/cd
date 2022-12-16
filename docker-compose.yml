@@ -2,12 +2,8 @@ version: '3'
 
 services:
 
-  react:
-    image: containerregistrycezarmunteanu30242.azurecr.io/dsmunteanucezardsmunteanucezarassignmentfrontend
-    ports:
-      - "3000:3000"
   demo-db:
-    image: containerregistrycezarmunteanu30242.azurecr.io/db
+    image: postgres
 
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root"]
@@ -25,7 +21,7 @@ services:
     container_name: demo-db
 
   demo-be:
-    image: containerregistrycezarmunteanu30242.azurecr.io/dsmunteanucezardsmunteanucezarassignmentbackend
+    image: be-img
     restart: always
     ports:
       - "8080:8080"
